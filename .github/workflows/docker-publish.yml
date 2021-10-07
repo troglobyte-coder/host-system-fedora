@@ -47,7 +47,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/debian-host:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/fedora-host:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
