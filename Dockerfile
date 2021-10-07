@@ -1,4 +1,4 @@
-FROM fedora:35
+FROM fedora:36
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG 'C.UTF-8'
