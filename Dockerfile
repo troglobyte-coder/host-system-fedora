@@ -23,7 +23,7 @@ RUN pip3 -q install --upgrade pip \
        scan-build==2.0.19 \
        ninja==1.10.0.post2 \
        cmake==3.18.2.post1 \
-       PyQt5==5.15.1 \
+       PyQt6==6.2.2 \
        pytest==6.1.2 \
        pytest-mock==3.3.1 \
        pytest-xdist==2.1.0
