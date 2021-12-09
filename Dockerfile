@@ -11,11 +11,11 @@ RUN dnf -y update && dnf upgrade --refresh \
        python3-pip \
        gcc \
        gcc-c++ \
-       mesa-libGLU \
        java-latest-openjdk-devel \
        git \
        ccache \
-       cppcheck
+       cppcheck \
+       mesa-libGL-devel
 
 RUN pip3 -q install --upgrade pip \
     && python3 -m pip -q install \
