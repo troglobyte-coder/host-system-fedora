@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LANG 'C.UTF-8'
 ENV CI 1
 
-RUN dnf -y update && dnf upgrade --refresh \
+RUN dnf -y update && dnf -y upgrade --refresh \
     && dnf -y install \
        sudo \
        python3-devel \
