@@ -11,7 +11,6 @@ RUN dnf -y update && dnf upgrade --refresh \
        python3-pip \
        gcc \
        gcc-c++ \
-       java-latest-openjdk-devel \
        git \
        ccache \
        cppcheck \
