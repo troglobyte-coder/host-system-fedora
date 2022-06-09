@@ -14,7 +14,9 @@ RUN dnf -y update && dnf -y upgrade --refresh \
        git \
        ccache \
        cppcheck \
-       mesa-libGL-devel
+       mesa-libGL-devel \
+       SDL2-devel \
+       ncurses-devel
 
 RUN pip3 -q install --upgrade pip \
     && python3 -m pip -q install \
