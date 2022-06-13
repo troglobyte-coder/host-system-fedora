@@ -15,7 +15,7 @@ RUN dnf -y update && dnf -y upgrade --refresh \
        ccache \
        cppcheck \
        mesa-libGL-devel \
-       SDL2-devel \
+       gtk4-devel \
        ncurses-devel
 
 RUN pip3 -q install --upgrade pip \
