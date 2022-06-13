@@ -14,8 +14,6 @@ RUN dnf -y update && dnf -y upgrade --refresh \
        git \
        ccache \
        cppcheck \
-       mesa-libGL-devel \
-       gtk4-devel \
        ncurses-devel
 
 RUN pip3 -q install --upgrade pip \
@@ -23,8 +21,4 @@ RUN pip3 -q install --upgrade pip \
        meson==0.62.0 \
        scan-build==2.0.19 \
        ninja==1.10.0.post2 \
-       cmake==3.18.2.post1 \
-       PyQt6==6.2.2 \
-       pytest==6.1.2 \
-       pytest-mock==3.3.1 \
-       pytest-xdist==2.1.0
+       cmake==3.18.2.post1
