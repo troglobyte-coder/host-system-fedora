@@ -1,8 +1,21 @@
-FROM fedora:latest
+#
+# Troglobyte AppHub:
+# author: Michael Gene Brockus
+# mail: <mailto: michaelbrockus@gmail.com>
+#
+FROM fedora:latest AS dummy
 
+# setting basic image info
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG 'C.UTF-8'
 ENV CI 1
+
+# setting compiler env vars
+ENV CC ccache gcc
+ENV CXX ccache g++
+ENV DC gdc
+
+FROM dummy AS getter
 
 RUN dnf -y update && dnf -y upgrade --refresh \
     && dnf -y install \
@@ -11,11 +24,10 @@ RUN dnf -y update && dnf -y upgrade --refresh \
        python3-pip \
        gcc \
        gcc-c++ \
+       gdc \
        ccache \
        cppcheck \
        ncurses-devel
-
-RUN curl -fsS https://dlang.org/install.sh | bash -s dmd
 
 RUN pip3 -q install --upgrade pip \
     && python3 -m pip -q install \
