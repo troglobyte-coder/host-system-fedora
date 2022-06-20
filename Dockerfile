@@ -11,14 +11,11 @@ RUN dnf -y update && dnf -y upgrade --refresh \
        python3-pip \
        gcc \
        gcc-c++ \
-       git \
-       snapd \
        ccache \
        cppcheck \
        ncurses-devel
 
-RUN ln -s /var/lib/snapd/snap /snap && \
-    sudo snap install dmd --classic
+RUN curl -fsS https://dlang.org/install.sh | bash -s dmd
 
 RUN pip3 -q install --upgrade pip \
     && python3 -m pip -q install \
