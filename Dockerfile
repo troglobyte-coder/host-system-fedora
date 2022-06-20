@@ -17,7 +17,8 @@ RUN dnf -y update && dnf -y upgrade --refresh \
        cppcheck \
        ncurses-devel
 
-RUN sudo snap install dmd --classic
+RUN ln -s /var/lib/snapd/snap /snap && \
+    sudo snap install dmd --classic
 
 RUN pip3 -q install --upgrade pip \
     && python3 -m pip -q install \
