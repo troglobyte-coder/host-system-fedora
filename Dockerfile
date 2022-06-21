@@ -24,6 +24,8 @@ RUN dnf -y update && dnf -y upgrade --refresh \
        python3-pip \
        clang \
        gdc \
+       dub \
+       git \
        ccache \
        cppcheck \
        ncurses-devel
